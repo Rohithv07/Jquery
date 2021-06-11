@@ -19,6 +19,21 @@ $(function() {
   // $("li").replaceWith(function() {
   //   return "<li>Replaced with function</li>"
   // });
-  var firstListItem = $("li:first");
-  $("p:first").replaceWith(firstListItem);
+  // var firstListItem = $("li:first");
+  // $("p:first").replaceWith(firstListItem);
+  //$(".red-box, .blue-box").replaceWith("<div class='green-box'>More green </div>");
+  //$("<div class='green-box'>More green </div>").replaceAll(".red-box, .blue-box");
+
+  //$("li").remove();
+  //$(".red-box").remove();
+  //$("form").children().not("input:text, textarea, br").remove();
+  // var detachListItem = $("li").detach(); // remember the event handler
+  // $("#content").append(detachListItem);
+  //$("p:first").empty();
+  //$(".red-box, .green-box, .blue-box").empty();
+
+  // attr(), prop(), val()
+   var specialLink = $("#special-link");
+   console.log(specialLink.attr("href"));
+   specialLink.attr("href", "/rohith");
 });
