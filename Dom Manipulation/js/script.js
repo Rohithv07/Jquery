@@ -33,7 +33,36 @@ $(function() {
   //$(".red-box, .green-box, .blue-box").empty();
 
   // attr(), prop(), val()
-   var specialLink = $("#special-link");
-   console.log(specialLink.attr("href"));
-   specialLink.attr("href", "/rohith");
+   // var specialLink = $("#special-link");
+   // console.log(specialLink.attr("href"));
+   // specialLink.attr("href", "/rohith");
+
+   // var checkbox = $("input:checkbox");
+   // console.log(checkbox.prop("checked"));
+   // console.log(checkbox.attr("checked"));
+
+   // var textInput = $("input:text"); // the very first input of type text
+   // textInput.val("Rohith V");
+   // console.log(textInput.val());
+   // var rangeInput = $("input[type='range']");
+   // console.log(rangeInput.val());
+
+
+   // Creating a slide show
+
+   var galleryImage = $(".gallery").find("img").first();
+   var images = [
+     "images/laptop-mobile_small.jpg",
+     "images/laptop-on-table_small.jpg",
+     "images/people-office-group-team_small.jpg"
+   ];
+
+   var i = 0;
+   setInterval(function() {
+     i = (i + 1) % images.length;
+     galleryImage.fadeOut(function() {
+       $(this).attr("src", images[i]);
+       $(this).fadeIn();
+     })
+   }, 2000);
 });
